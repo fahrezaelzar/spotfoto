@@ -15,7 +15,10 @@ function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const handleNavClick = (e, item) => {
+    const handleNavClick = (
+        e: React.MouseEvent<HTMLAnchorElement>,
+        item: string
+      ) => {
       e.preventDefault();
       const section = document.getElementById(item.toLowerCase());
       if (section) {
